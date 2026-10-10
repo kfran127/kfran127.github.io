@@ -66,3 +66,34 @@
   document.addEventListener('visibilitychange',sync);
   resize();sync();
 })();
+
+// Detail panels are outside the card grid, so expansion never changes card heights.
+(() => {
+  const controls = Array.from(document.querySelectorAll('.project-detail-toggle'));
+  function closeAll() {
+    controls.forEach(button => {
+      button.setAttribute('aria-expanded', 'false');
+      document.getElementById(button.getAttribute('aria-controls')).hidden = true;
+    });
+  }
+  controls.forEach(button => {
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      closeAll();
+      if (open) {
+        button.setAttribute('aria-expanded', 'true');
+        const panel = document.getElementById(button.getAttribute('aria-controls'));
+        panel.hidden = false;
+        panel.querySelector('.close-detail').focus({preventScroll: true});
+        panel.scrollIntoView({block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+      }
+    });
+  });
+  document.querySelectorAll('.close-detail').forEach(button => {
+    button.addEventListener('click', () => {
+      const panel = button.closest('.project-detail');
+      closeAll();
+      controls.find(control => control.getAttribute('aria-controls') === panel.id).focus();
+    });
+  });
+})();
