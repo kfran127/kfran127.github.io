@@ -32,17 +32,17 @@
     ctx.clearRect(0, 0, width, height);
     const r = Math.min(width * .375, height * .365);
     const glow = ctx.createRadialGradient(width/2,height/2,0,width/2,height/2,r*1.25);
-    glow.addColorStop(0,'rgba(27,64,123,.18)');glow.addColorStop(1,'rgba(27,64,123,0)');
+    glow.addColorStop(0,'rgba(70,40,115,.18)');glow.addColorStop(1,'rgba(70,40,115,0)');
     ctx.fillStyle=glow;ctx.fillRect(0,0,width,height);
-    ctx.beginPath();ctx.ellipse(width/2,height/2,r*1.17,r*.37,-.4,0,Math.PI*2);ctx.strokeStyle='rgba(83,136,219,.24)';ctx.lineWidth=.8;ctx.stroke();
+    ctx.beginPath();ctx.ellipse(width/2,height/2,r*1.17,r*.37,-.4,0,Math.PI*2);ctx.strokeStyle='rgba(140,106,205,.24)';ctx.lineWidth=.8;ctx.stroke();
     for (let latitude = -60; latitude <= 60; latitude += 20) {
       const a=latitude*Math.PI/180, points=[];
       for(let j=0;j<=100;j++){const t=j/100*Math.PI*2;points.push(project(Math.cos(a)*Math.cos(t),Math.sin(a),Math.cos(a)*Math.sin(t)));}
-      path(points,'rgba(76,125,204,.21)');
+      path(points,'rgba(134,105,193,.21)');
     }
     for(let longitude=0;longitude<180;longitude+=20){const a=longitude*Math.PI/180, points=[];
       for(let j=0;j<=100;j++){const t=j/100*Math.PI*2;points.push(project(Math.cos(t)*Math.cos(a),Math.sin(t),Math.cos(t)*Math.sin(a)));}
-      path(points,'rgba(76,125,204,.21)');
+      path(points,'rgba(134,105,193,.21)');
     }
     const projected=nodes.map(n=>project(...n));
     for(let i=0;i<nodes.length;i++){
@@ -50,10 +50,10 @@
       for(let j=i+1;j<nodes.length;j++){
         if(projected[j][2]<0)continue;
         const d=nodes[i].reduce((s,v,k)=>s+(v-nodes[j][k])**2,0);
-        if(d<.17)path([projected[i],projected[j]],'rgba(85,149,255,.25)',.65);
+        if(d<.17)path([projected[i],projected[j]],'rgba(167,139,250,.25)',.65);
       }
-      const [x,y,z]=projected[i];ctx.beginPath();ctx.arc(x,y,i%13===0?2.5:1.2,0,Math.PI*2);ctx.fillStyle=`rgba(125,178,255,${.35+z*.6})`;ctx.fill();
-      if(i%13===0){ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.strokeStyle='rgba(105,163,255,.23)';ctx.stroke();}
+      const [x,y,z]=projected[i];ctx.beginPath();ctx.arc(x,y,i%13===0?2.5:1.2,0,Math.PI*2);ctx.fillStyle=`rgba(194,172,255,${.35+z*.6})`;ctx.fill();
+      if(i%13===0){ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.strokeStyle='rgba(167,139,250,.23)';ctx.stroke();}
     }
   }
   function animate(now){frame=0;if(paused||!visible||document.hidden)return;if(last)angle+=Math.min(now-last,50)*.000075;last=now;draw();frame=requestAnimationFrame(animate);}
