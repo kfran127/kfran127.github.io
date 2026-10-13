@@ -1,41 +1,28 @@
-# Kency Francois — Hybrid portfolio
+# Kency Francois — Cybersecurity portfolio
 
-Buildless GitHub Pages portfolio: static HTML, CSS, and JavaScript. No npm installation, third-party scripts, external fonts, analytics, or build pipeline required.
+Static GitHub Pages website. No dependencies, backend, or build step.
 
-## Preview
+## Files
 
-From this directory run `python3 -m http.server 8000`, then open http://localhost:8000.
+- index.html: concise content, navigation, and project cards.
+- style.css: existing purple design and responsive layout.
+- app.js: globe animation; project expansion code removed.
+- favicon.svg: existing favicon.
+- assets/Kency-Francois-Resume.pdf: exact owner-supplied PDF, unchanged.
+- assets/10-cloudwatch-subscription-filter.png and assets/12-iam-privilege-remediation.png: original images from the AWS project repository.
 
-## Deploy to GitHub Pages
+## Current projects
 
-1. Commit `index.html`, `style.css`, `app.js`, `favicon.svg`, `.nojekyll`, and this README to the `main` branch of `kfran127/kfran127.github.io`.
-2. In GitHub → repository Settings → Pages, select **Deploy from a branch**, **main**, **/ (root)**, then Save.
-3. Wait for the Pages build to complete under Actions. Visit https://kfran127.github.io/ and hard-refresh if the old placeholder is cached.
+SecureBank IAM Lab and AWS IAM Privilege Escalation Detection & Incident Response are Completed. AWS Password Spraying Detection Lab is In Development. AI-Powered SOC Investigation Assistant is Planned.
 
-From an authenticated checkout:
+AWS content is sourced from the repository README, architecture, detection rules, incident report, lessons learned, security review, and test documentation. One AdministratorAccess attachment was validated end-to-end in AWS; other rules have synthetic validation only. Response was manual. The two selected screenshots show the delivery subscription and detach event. No latency benchmark, broad IAM coverage, automated remediation, or production deployment is claimed.
 
-```sh
-git add index.html style.css app.js favicon.svg .nojekyll README.md
-git commit -m "Build refined hybrid cybersecurity portfolio"
-git push origin main
-```
+## Preview and deployment
 
-## Content and scope
+Run `python3 -m http.server 8000` in this directory. Upload the deployment ZIP contents directly to the repository root, retaining the assets folder. Do not upload the ZIP itself. GitHub Settings → Pages should use main, / (root). No changes were pushed or published by this update.
 
-Facts come from the user's supplied dates/statuses and the local profile reference. SecureBank details and the LinkedIn URL come from that reference. Exactly four projects are featured: SecureBank IAM Lab (Completed); AWS Password Spraying Detection Lab (In Development); AWS IAM Privilege Escalation Detection & Incident Response (Planned); AI-Powered SOC Investigation Assistant (Planned). SecureBank is the main feature and the only project with a repository link. The three new project architectures describe proposed designs, not implemented systems or validated outcomes. Toolkit entries distinguish internship tools from lab tools. No measurable outcomes, live security metrics, employment availability, or credentials are fabricated.
+The Resume navigation link opens the local PDF in a new tab; Download Resume downloads it. Both use assets/Kency-Francois-Resume.pdf. No missing assets.
 
-The globe is an abstract decorative network, not live telemetry or real geography. Motion is pausable, respects reduced-motion preferences, and stops when offscreen or the browser tab is hidden. Native details panels work without JavaScript; the globe is the only JS-dependent feature.
+## Concise homepage refinement
 
-## Future content edits
-
-Edit the HTML directly. Update the three developing projects only when implementation evidence is available. Add repository links after the actual repositories exist. Add an email or résumé link only when the owner supplies those details. Verify the LinkedIn and SecureBank links before publishing if they have changed.
-
-## Version 2 refinements
-
-Midnight-purple theme retains the existing layout and globe. Professional toolkit and internship responsibilities reflect the owner's supplied details; personal-lab and developing skills remain separate. The confirmed contact email is kencyfrancoiss@gmail.com. SecureBank case study details and original screenshot URLs are sourced from its public README; administrative units are explicitly deferred in the rebuild. The three other projects retain their accurate statuses and proposed architecture labels. No résumé PDF exists in the current repository, so no download button is included. Supply the actual PDF before adding that button.
-
-Root structure: index.html, style.css, app.js, favicon.svg. The deployment archive omits the legacy assets directory. Screenshots load lazily from GitHub attachments and require network access. No changes were pushed or published; owner approval is required before deployment.
-
-## Version 2.2
-
-Combined the initial internship investigation bullets into one, retained all professional technology exposure, strengthened the SecureBank overview using the owner's supplied wording, and compacted the professional profile transition. Desktop (1280px), tablet (768px), and mobile (390px) checked without horizontal overflow. Case study disclosure and globe pause control verified. Root asset paths and navigation targets verified. No publish or push performed.
+Removed technical walkthroughs, screenshot galleries, future-project architecture blocks, and detail controls from the homepage. Skills appear once, Willkie experience uses four bullets, and About is one paragraph. All four projects and correct statuses remain. Resume navigation and download links point to the owner-supplied local PDF. Detailed project documentation remains in GitHub. No push or deployment performed.
