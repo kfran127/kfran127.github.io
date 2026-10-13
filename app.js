@@ -66,3 +66,23 @@
   document.addEventListener('visibilitychange',sync);
   resize();sync();
 })();
+
+// Decorative security-signal study; never represents live telemetry.
+(() => {
+  const model = document.querySelector('.signal-model');
+  const control = document.querySelector('#signal-motion');
+  if (!model || !control) return;
+  const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = preference.matches;
+  let visible = true;
+  function sync() {
+    model.classList.toggle('is-paused', paused || !visible || document.hidden);
+    control.setAttribute('aria-pressed', String(paused));
+    control.textContent = paused ? 'Play motion' : 'Pause motion';
+  }
+  control.addEventListener('click', () => { paused = !paused; sync(); });
+  preference.addEventListener('change', () => { paused = preference.matches; sync(); });
+  document.addEventListener('visibilitychange', sync);
+  new IntersectionObserver(entries => { visible = entries[0].isIntersecting; sync(); }).observe(model);
+  sync();
+})();
