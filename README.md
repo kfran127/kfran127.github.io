@@ -13,7 +13,7 @@ Static GitHub Pages website. No dependencies, backend, or build step.
 
 ## Current projects
 
-SecureBank IAM Lab and AWS IAM Privilege Escalation Detection & Incident Response are Completed. AWS Password Spraying Detection Lab is In Development. AI-Powered SOC Investigation Assistant is Planned.
+SecureBank IAM Lab and AWS IAM Privilege Escalation Detection & Incident Response are Completed. Splunk SIEM Detection Engineering & Threat Hunting is Planned. AI-Powered SOC Investigation Assistant is Planned.
 
 AWS content is sourced from the repository README, architecture, detection rules, incident report, lessons learned, security review, and test documentation. One AdministratorAccess attachment was validated end-to-end in AWS; other rules have synthetic validation only. Response was manual. The two selected screenshots show the delivery subscription and detach event. No latency benchmark, broad IAM coverage, automated remediation, or production deployment is claimed.
 
