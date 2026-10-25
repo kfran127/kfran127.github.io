@@ -1,28 +1,29 @@
 # Kency Francois — Cybersecurity portfolio
 
-Static GitHub Pages website. No dependencies, backend, or build step.
+Static HTML, CSS, and JavaScript for GitHub Pages. No build system, dependencies, backend, API credentials, or paid hosting required.
 
-## Files
+## Local preview
 
-- index.html: concise content, navigation, and project cards.
-- style.css: existing purple design and responsive layout.
-- app.js: globe animation; project expansion code removed.
-- favicon.svg: existing favicon.
-- assets/Kency-Francois-Resume.pdf: exact owner-supplied PDF, unchanged.
-- assets/10-cloudwatch-subscription-filter.png and assets/12-iam-privilege-remediation.png: original images from the AWS project repository.
+Run `python3 -m http.server 8000` in this directory and open http://localhost:8000.
 
-## Current projects
+## Current presentation
 
-SecureBank IAM Lab and AWS IAM Privilege Escalation Detection & Incident Response are Completed. Splunk SIEM Detection Engineering & Threat Hunting is Planned. AI-Powered SOC Investigation Assistant is Planned.
+Three flagship projects, in order:
 
-AWS content is sourced from the repository README, architecture, detection rules, incident report, lessons learned, security review, and test documentation. One AdministratorAccess attachment was validated end-to-end in AWS; other rules have synthetic validation only. Response was manual. The two selected screenshots show the delivery subscription and detach event. No latency benchmark, broad IAM coverage, automated remediation, or production deployment is claimed.
+1. AWS IAM Privilege Escalation Detection & Incident Response — Completed. Real repository link. CloudTrail → CloudWatch Logs subscription → Python Lambda → SNS; containment remains manual.
+2. SentinelAI — AI-Powered AWS Threat Investigation — Planned. One initial simulated unfamiliar-source-IP AWS activity investigation. Proposed threat intelligence enrichment and evidence-linked AI reporting; no live integrations, broader incident coverage, or automated remediation claimed.
+3. Enterprise SIEM Detection Engineering & Threat Hunting — Planned. Separate Windows Server/Sysmon and Linux/Splunk Enterprise EC2 instances, with Universal Forwarder over private AWS networking. MacBook remote administration. CloudTrail → S3 → Splunk is explicitly later work.
 
-## Preview and deployment
+SecureBank IAM Lab — Completed — remains below the flagship projects under Additional Projects, with its real repository link.
 
-Run `python3 -m http.server 8000` in this directory. Upload the deployment ZIP contents directly to the repository root, retaining the assets folder. Do not upload the ZIP itself. GitHub Settings → Pages should use main, / (root). No changes were pushed or published by this update.
+Planned cards have non-clickable status labels and no invented repository links. Architecture graphics contain one consistently styled highlight each and accessible text equivalents. Tools being learned or developed through projects are labeled accordingly. The existing experience section, contact, logo, decorative models, pause controls, and supplied résumé PDF are preserved.
 
-The Resume navigation link opens the local PDF in a new tab; Download Resume downloads it. Both use assets/Kency-Francois-Resume.pdf. No missing assets.
+## Review package
 
-## Concise homepage refinement
+Runtime files are index.html, style.css, app.js, favicon.svg, .nojekyll, and assets/Kency-Francois-Resume.pdf. Legacy screenshot assets are not required by the new homepage and are excluded from the review ZIP. The PDF is the unchanged owner-supplied document.
 
-Removed technical walkthroughs, screenshot galleries, future-project architecture blocks, and detail controls from the homepage. Skills appear once, Willkie experience uses four bullets, and About is one paragraph. All four projects and correct statuses remain. Resume navigation and download links point to the owner-supplied local PDF. Detailed project documentation remains in GitHub. No push or deployment performed.
+## Deployment after owner approval
+
+Upload the review ZIP's contents directly to the root of kfran127/kfran127.github.io, preserving the assets folder. GitHub Settings → Pages uses main, / (root). Do not upload the ZIP itself. Keep the versioned stylesheet link to avoid stale browser styles.
+
+This October 25 revision is prepared locally for review. It has not been pushed or deployed.
